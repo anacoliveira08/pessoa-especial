@@ -1,13 +1,78 @@
+/* Reset básico para o site carregar igual em todos os navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-  background-color: rgb(255, 185, 200); /*Pode escolher outra cor se quiser*/
+    /* Um degradê suave entre tons de rosa e pêssego */
+    background: linear-gradient(135deg, #ffafbd 0%, #ffc3a0 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    color: #4a4a4a;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 450px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 50px 30px;
+    border-radius: 30px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 h1 {
-  color: white; /*Pode escolher outra cor se quiser*/
-  text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    color: #ff4d6d; /* Rosa vibrante */
+    margin-bottom: 15px;
 }
 
-p {
-  font-family: baskervville;
-  font-size: 20px;
+.divider {
+    height: 3px;
+    width: 60px;
+    background: linear-gradient(to right, #ff4d6d, #ff8fa3);
+    margin: 0 auto 30px;
+    border-radius: 10px;
+}
+
+.mensagem {
+    line-height: 1.8;
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    font-weight: 300;
+    color: #555;
+}
+
+.assinatura {
+    font-size: 1rem;
+    color: #888;
+}
+
+.assinatura span {
+    display: block;
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;
+    color: #ff4d6d;
+    margin-top: 10px;
+    font-size: 2rem;
+    /* Faz o nome da Ana balançar levemente */
+    animation: pulse 2s infinite;
+}
+
+/* Animação suave para o nome */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
 }
